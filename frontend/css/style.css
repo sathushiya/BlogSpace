@@ -1,0 +1,348 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* ====== START: NEW LIGHT BLUE THEME COLOR PALETTE ====== */
+:root {
+    /* Primary Blue Colors */
+    --primary-color: #1E88E5;        /* Bright, modern blue */
+    --primary-darker: #1565C0;      /* Darker blue for hover effects */
+
+    /* Navigation & Dark Tones */
+    --secondary-color: #263238;     /* Dark Charcoal for the navbar */
+    --text-color: #333;
+    --white-color: #ffffff;
+    
+    /* Background Colors */
+    --background-light: #f4f9ff;    /* Very light bluish background */
+    --background-mid: #e3f2fd;      /* Soft light blue for gradient */
+    --wave-color: #bbdefb;          /* Pastel blue for the wave design */
+
+    /* Utility */
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+/* ====== END: NEW LIGHT BLUE THEME COLOR PALETTE ====== */
+
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    
+    /* --- NEW LAYERED BACKGROUND --- */
+    background-color: var(--background-light); 
+    background-image: 
+        /* Layer 2: The decorative wave at the bottom (recolored) */
+        url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3e%3cpath fill='%23bbdefb' fill-opacity='1' d='M0,224L48,229.3C96,235,192,245,288,250.7C384,256,480,256,576,229.3C672,203,768,149,864,138.7C960,128,1056,160,1152,165.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3e%3c/path%3e%3c/svg%3e"),
+        
+        /* Layer 1: A subtle diagonal gradient for variance (recolored) */
+        linear-gradient(150deg, var(--background-mid) 15%, var(--background-light) 70%);
+
+    background-repeat: no-repeat;
+    background-position: bottom, center;
+    background-attachment: fixed;
+}
+
+/* Reusable Components */
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary-darker);
+}
+
+.card {
+    background: var(--white-color);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navbar a {
+    color: var(--white-color);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    position: relative;
+}
+
+.navbar a:hover:not(.btn) {
+    color: var(--primary-color); /* Blue hover for links */
+}
+
+/* Styling for a "notification dot" */
+.navbar a.notification-dot::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -8px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color); /* Blue dot */
+    border-radius: 50%;
+    border: 2px solid var(--secondary-color);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links span {
+    font-weight: 600;
+    margin-left: 1.5rem;
+}
+
+/* Forms */
+.form-container {
+    max-width: 450px;
+    margin: 4rem auto;
+    padding: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input {
+    padding-left: 40px;
+}
+
+.form-group .icon {
+    position: absolute;
+    left: 15px;
+    top: 40px;
+    color: #aaa;
+}
+
+/* Utility & Message Classes */
+.message {
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Single Post Styling */
+#single-post-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.post-meta {
+    color: #666;
+    margin-bottom: 2rem;
+}
+#post-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Registration Success Panel */
+#registration-success-panel {
+    display: none;
+    text-align: center;
+}
+#registration-success-panel .success-icon {
+    font-size: 4rem;
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+#registration-success-panel .welcome-message {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+/* Danger Button (uses the primary blue color) */
+.btn.btn-danger {
+    background-color: var(--primary-color);
+}
+.btn.btn-danger:hover {
+    background-color: var(--primary-darker);
+}
+
+/* Welcome Message Box */
+#welcome-message-container {
+    background-color: var(--white-color);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    font-size: 1.2rem;
+    border-left: 5px solid var(--primary-color); /* Blue accent border */
+}
+#welcome-message-container strong {
+    color: var(--primary-darker);
+}
+
+/* Post Images & Cards */
+.post-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+.post-card {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+.post-card-image {
+    flex-basis: 250px;
+    flex-shrink: 0;
+}
+.post-card-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+.post-card-content {
+    flex: 1;
+}
+
+/* Animation on Scroll (AOS) initial state */
+[data-aos] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Search Box */
+.search-container {
+    position: relative;
+    margin-bottom: 2rem;
+    max-width: 400px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: 0;
+}
+#searchInput {
+    width: 100%;
+    padding: 12px 20px 12px 45px; 
+    font-size: 0.9rem;
+    border-radius: 30px; 
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    outline: none; 
+    transition: all 0.3s ease;
+}
+#searchInput:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.2); /* Blue focus shadow */
+}
+.search-icon {
+    position: absolute;
+    left: 18px; 
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+#no-results-message {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: #777;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+    .navbar .logo {
+        margin-bottom: 1rem;
+    }
+    .post-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .post-card-image {
+        flex-basis: auto;
+        width: 100%;
+    }
+}

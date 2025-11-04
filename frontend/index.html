@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Your new default title -->
+    <title>BlogSpacee - Your Space for Ideas</title>
+    
+    <!-- Your new default icon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✒️</text></svg>">
+
+    <!-- Your stylesheets -->
+    <link rel="stylesheet" href="css/style.css?v=1.1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">BlogSpace</a>
+            <div class="nav-links" id="nav-links-container"></div>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <div id="welcome-message-container"></div>
+        
+        <!-- ====== START: THIS IS THE NEW SEARCH BOX ====== -->
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" placeholder="Search by title or author...">
+        </div>
+        <!-- ====== END: NEW SEARCH BOX ====== -->
+
+        <h1>Recent Posts</h1>
+        <div id="blog-posts-container"></div>
+    </main>
+    
+    <script src="js/main.js"></script>
+
+    <!-- ====== START: ADD AOS JAVASCRIPT ====== -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init(); // Initialize the library
+    </script>
+    <!-- ====== END: ADD AOS JAVASCRIPT ====== -->
+
+</body>
+</html>
