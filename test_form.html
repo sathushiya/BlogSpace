@@ -1,0 +1,33 @@
+<!-- File: test_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Test</title>
+    <style>
+        body { font-family: sans-serif; padding: 2em; }
+        input, textarea { width: 300px; margin-bottom: 1em; padding: 0.5em; }
+    </style>
+</head>
+<body>
+    <h1>Direct PHP Upload Test</h1>
+    <p>This form bypasses all JavaScript to find the real PHP error.</p>
+    
+    <!-- This form submits directly to your create_post.php script -->
+    <form action="api/create_post.php" method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" value="Test Title" required>
+        </div>
+        <div>
+            <label for="content">Content:</label><br>
+            <textarea id="content" name="content" required>Test content.</textarea>
+        </div>
+        <div>
+            <label for="image">Image:</label><br>
+            <input type="file" id="image" name="image" required>
+        </div>
+        <button type="submit">Run Test</button>
+    </form>
+</body>
+</html>

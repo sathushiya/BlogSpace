@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Editor - BlogSpace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+
+    <header class="header-solid">
+        <nav>
+            <a href="index.html" class="logo">BlogSpace</a>
+            <ul class="nav-links" id="nav-links"></ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h1 id="editor-title"><span class="material-symbols-outlined">edit_note</span> Create New Post</h1>
+            
+            <!-- The form was incomplete. This is the complete and correct version. -->
+            <form id="post-form">
+                <input type="hidden" id="post-id" name="post-id">
+                
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <div class="input-with-icon">
+                        <input type="text" id="title" name="title" placeholder="Your Post Title" required>
+                        <span class="material-symbols-outlined">title</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="image">Header Image (Optional)</label>
+                    <input type="file" id="image" name="image" accept="image/png, image/jpeg, image/gif">
+                </div>
+                
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <textarea id="content" name="content" placeholder="Write your story here..." rows="10" required></textarea>
+                </div>
+
+                <!-- RESTORED: The button with its icon and text -->
+                <button type="submit" class="btn btn-primary" id="save-post-btn">
+                    <span class="material-symbols-outlined">add_circle</span>
+                    Add Post
+                </button>
+            </form> <!-- RESTORED: The closing </form> tag -->
+
+            <p id="form-message" class="form-message"></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 BlogSpace. All rights reserved.</p>
+        <p>A Web Programming Project for IN2120.</p>
+    </footer>
+    
+    <script src="main.js"></script>
+</body>
+</html>

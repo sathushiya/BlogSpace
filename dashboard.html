@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard - BlogSpace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+
+    <header class="header-solid">
+        <nav>
+            <a href="index.html" class="logo">BlogSpace</a>
+            <ul class="nav-links" id="nav-links"></ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="posts-header">
+             <h1><span class="material-symbols-outlined">dashboard</span> My Posts</h1>
+             
+             <form class="search-form" id="search-form" role="search">
+                <div class="input-with-icon">
+                    <input type="search" id="search-input" name="search" placeholder="Search my posts...">
+                    <span class="material-symbols-outlined">search</span>
+                </div>
+            </form>
+        </div>
+        
+        <a href="editor.html" class="btn btn-primary" style="margin-bottom: 1.5rem; display: inline-block;">
+            <span class="material-symbols-outlined">add_circle</span>
+            Create New Post
+        </a>
+       
+        <div class="posts-grid" id="posts-container">
+            <p>Loading your posts...</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 BlogSpace. All rights reserved.</p>
+        <p>A Web Programming Project for IN2120.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

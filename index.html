@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogSpace - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">BlogSpace</a>
+            <ul class="nav-links" id="nav-links"></ul>
+        </nav>
+    </header>
+<div class="content-wrapper"></div>
+
+    <main>
+        <section class="welcome-section">
+            <div class="welcome-content">
+                <h1>Welcome to BlogSpace</h1>
+                <p>Where words find their universe, Craft. Connect. Create</p>
+                <a href="#posts" class="btn">
+                    <span class="material-symbols-outlined">visibility</span>
+                    Start Crafting
+                </a>
+            </div>
+        </section>
+
+        <div class="container" id="posts">
+            <div class="posts-header">
+                <h1><span class="material-symbols-outlined">article</span> Latest Posts</h1>
+
+                <form class="search-form" id="search-form" role="search">
+                    <div class="input-with-icon">
+                        <input type="search" id="search-input" name="search" placeholder="Search by title or author...">
+                        <span class="material-symbols-outlined">search</span>
+                    </div>
+                </form>
+            </div>
+
+            <div class="posts-grid" id="posts-container">
+                <p>Loading posts...</p>
+            </div>
+        </div>
+    </main></div>
+
+    <footer>
+        <p>&copy; 2025 BlogSpace. All rights reserved.</p>
+        <p>A Web Programming Project for IN2120.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
